@@ -9,4 +9,6 @@ export interface IGadget {
   connectivity: string;
   powerSource: string;
   features: string | string[];
+  image: string;
+  
 }
