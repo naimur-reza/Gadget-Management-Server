@@ -10,18 +10,12 @@ export const app: Application = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://gadget-management-frontend-naimur-reza.vercel.app",
+    origin: "http://localhost:5173/",
     credentials: true,
   }),
 );
 
 app.use("/api/v1", router);
-
-// global error handler
-app.use(errorHandler);
-
-// not found router handler
-app.use(notFound);
 
 app.get("/", (req, res) => {
   res.status(200).json({
@@ -29,3 +23,9 @@ app.get("/", (req, res) => {
     message: "Gadget management server is running",
   });
 });
+
+// global error handler
+app.use(errorHandler);
+
+// not found router handler
+app.use(notFound);
