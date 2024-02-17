@@ -13,7 +13,7 @@ const gadgetSchema = new Schema<IGadget>(
     connectivity: { type: String },
     powerSource: { type: String },
     features: { type: [] },
-    image: { type: String },
+    imageUrl: { type: String },
   },
   {
     timestamps: true,
